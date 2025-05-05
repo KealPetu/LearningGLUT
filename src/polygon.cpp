@@ -19,7 +19,7 @@ int main(int argc, char *argv[]){
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
 
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClearColor(0.0f, 1.0f, 0.5f, 1.0f);
 
     glutMainLoop();
     return EXIT_SUCCESS;
