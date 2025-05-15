@@ -2,3 +2,4 @@ Makefile
 /output
 /out
 /.vscode/tasks.json
+*.zip
