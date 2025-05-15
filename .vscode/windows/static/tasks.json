@@ -2,20 +2,22 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: g++ build active file",
-            "command": "/usr/bin/g++",
+            "label": "C/C++: g++.exe build active file",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-                "${workspaceFolder}/output/${fileBasenameNoExtension}",
-                "-I${workspaceFolder}/include",
-                "-L${workspaceFolder}/lib",
-                "-lglut",
-                "-lGLU",
-                "-lGL",
-                "-lXxf86vm"
+                "${workspaceFolder}\\output\\${fileBasenameNoExtension}.exe",
+                "-I${workspaceFolder}\\include",
+                "-L${workspaceFolder}\\lib\\windows",
+                "-lfreeglut_static",
+                "-lopengl32",
+                "-lgdi32",
+                "-lglu32",
+                "-lwinmm",
+                "-DFREEGLUT_STATIC"
             ],
             "options": {
                 "cwd": "${fileDirname}"
