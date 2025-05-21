@@ -11,8 +11,8 @@ int main(int argc, char *argv[]){
 
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGB);
-    glutInitWindowPosition(10, 10);
-    glutInitWindowSize(500, 500);
+    //glutInitWindowPosition(10, 10);
+    glutInitWindowSize(800, 800);
 
     glutCreateWindow("GLUT Points");
 
@@ -32,9 +32,12 @@ void display(){
     glPointSize(10.0f);
     // draw
     glBegin(GL_TRIANGLES);
-        glVertex2f(0.0f,5.0f);
-        glVertex2f(4.0f,-3.0f);
-        glVertex2f(-4.0f,-3.0);
+        glColor3f(1.0f, 0.0f,0.0f);
+        glVertex2f(0.0f,0.5f);
+        glColor3f(0.0f, 1.0f,0.0f);
+        glVertex2f(-0.5f,-0.5f);
+        glColor3f(0.0f, 0.0f,1.0f);
+        glVertex2f(0.5f,-0.5);
     glEnd();
     glFlush();
 }
@@ -44,6 +47,6 @@ void reshape(int w, int h){
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
 
-    gluOrtho2D(-10, 10, -10, 10);
+    gluOrtho2D(-1.0f, 1.0f, -1.0f, 1.0f);
     glMatrixMode(GL_MODELVIEW);
 }
