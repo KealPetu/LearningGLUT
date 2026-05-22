@@ -1,5 +1,9 @@
 Makefile
-/output
-/out
-/.vscode/tasks.json
+output/
+out/
+.vscode/
 *.zip
+*.exe
+build/
+.idea/
+.vs/
